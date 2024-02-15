@@ -1,0 +1,15 @@
+{
+	"line_items": [{
+		"quantity": 1,
+        "price_data": {
+          "currency": "eur",
+          "unit_amount": 500,
+          "product_data": {
+            "name": "Cumulus",
+            "description":"Light as air. The Cumulus is encased in cloud-like waterproof nylon and has a spacious main interior. Collapse it for easy travel and snap it shut with magnetic closures.",
+            "images":["https://i.ibb.co/NtpJ0XQ/cumulus-olive.png"]
+          }
+        }
+	}],
+	"customer_email": "1234@gmail.com"
+}
