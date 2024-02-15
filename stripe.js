@@ -1,4 +1,5 @@
 // going instantie stripe object
+require('dotenv').config();
 const stripeAPI = require('stripe')(process.env.STRIPE_SECRET_KEY);
 
-module.export = stripeAPI;
+module.exports = stripeAPI;
