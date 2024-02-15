@@ -1,6 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 require('dotenv').config({ path: './.env' });
+const createCheckoutSession = require('./api/checkout');
 
 // going to initiate app
 const app = express();
@@ -11,5 +12,8 @@ app.use(express.json());
 app.use(cors({ origin: true }));
 //going to create a get route just to make sure the server is working
 app.get('/', (req, res) => res.send('Hello Server'));
+
+app.post('/create-checkout-session', createCheckoutSession);
+
 //going to call the listen function that we can connect to the server and inside is callback function console.log
 app.listen(port, () => console.log('server listening on port', port));
