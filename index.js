@@ -7,7 +7,10 @@ const createCheckoutSession = require('./api/checkout');
 const app = express();
 const port = 8080;
 //going to use json middleware
-app.use(express.json());
+app.use(express.json({
+    // endpoint is public so we need to verify that data is comming from our Stripe account
+    verify: (req, res, buffer) => req['rawBody'] = buffer,
+}));
 //we need cors module that react app  can send requests to node server
 app.use(cors({ origin: true }));
 //going to create a get route just to make sure the server is working
