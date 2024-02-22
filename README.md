@@ -1,6 +1,6 @@
 # Code for Stripe Masterclass With React.js & Node.js from Udemy
 ## Stripe Masterclass Server Repo
-(Original public code for Server)[https://github.com/cagarweyne/stripe-masterclass-server/]
+[Original public code for Server](https://github.com/cagarweyne/stripe-masterclass-server/)
 
 ## This code is upgraded for:
 - Node 20.8.0
