@@ -10,7 +10,7 @@ const stripeAPI = require('../stripe');
 //going to create webhook function  and req nad response as arguments
 function webhook(req, res) {
     const sig = req.headers['stripe-signature'];
-    let stripeEvent:
+    let stripeEvent;
 
     try {
         stripeEvent = stripeAPI.webhook.constructEvent(
@@ -26,4 +26,4 @@ function webhook(req, res) {
 
     
 }
-module.exports = webhook
+module.exports = webhook;
