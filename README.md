@@ -1,14 +1,14 @@
-#Code for Stripe Masterclass With React.js & Node.js from Udemy
-##Stripe Masterclass Server Repo
+# Code for Stripe Masterclass With React.js & Node.js from Udemy
+## Stripe Masterclass Server Repo
 (Original public code for Server)[https://github.com/cagarweyne/stripe-masterclass-server/]
 
-##This code is upgraded for:
+## This code is upgraded for:
 - Node 20.8.0
 - Express ^4.18.2
 - Cors ^2.8.5
 - Stripe ^14.16.0
 
-###Note for developers:
+### Note for developers:
 'In version numbers,
  the caret (^) symbol is often used in semantic versioning to specify a range of compatible versions.
  When you see a caret symbol before a version number, such as "^14.16.0",
