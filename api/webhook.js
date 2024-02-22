@@ -5,6 +5,7 @@ const stripeAPI = require('../stripe');
  * @param {*} res
  * 
  * Documentation https://docs.stripe.com/webhooks 
+ * https://docs.stripe.com/webhooks/quickstart
  */
 
 //going to create webhook function  and req nad response as arguments
