@@ -20,7 +20,7 @@ app.get('/', (req, res) => res.send('Hello Server'));
 
 app.post('/create-checkout-session', createCheckoutSession);
 // create-payment-intent is endpoint and paymentIntent is function which will handle this endpoint
-app.post('create-payment-intent', paymentIntent);
+app.post('/create-payment-intent', paymentIntent);
 
 app.post('/webhook', webhook);
 
