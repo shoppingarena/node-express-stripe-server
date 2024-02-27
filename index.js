@@ -3,6 +3,7 @@ const cors = require('cors');
 require('dotenv').config({ path: './.env' });
 const createCheckoutSession = require('./api/checkout');
 const webhook = require('./api/webhook');
+const paymentIntent = require('./api/paymentintent');
 
 // going to initiate app
 const app = express();
@@ -18,6 +19,8 @@ app.use(cors({ origin: true }));
 app.get('/', (req, res) => res.send('Hello Server'));
 
 app.post('/create-checkout-session', createCheckoutSession);
+// create-payment-intent is endpoint and paymentIntent is function which will handle this endpoint
+app.post('create-payment-intent', paymentIntent);
 
 app.post('/webhook', webhook);
 
