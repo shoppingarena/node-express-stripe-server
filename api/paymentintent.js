@@ -1,6 +1,11 @@
 const stripeAPI = require('../stripe');
 
-
+function calculateOrderAmount(cartItems) {
+    return cartItems.reduce((total, product) => {
+        return total + product.price * product.quantity;
+    }, 0) * 100;
+    
+}
 
 async function paymentIntent(req, res) {
     // pull off
