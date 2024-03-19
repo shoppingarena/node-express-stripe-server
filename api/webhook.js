@@ -1,4 +1,11 @@
 const stripeAPI = require('../stripe');
+
+const webHookHandlers = {
+    'checkout.session.completed': (data) => {
+        console.log('Checkout completed successfully', data);
+        // other business logic: write to database, email to user, connect to third party service
+    }
+}
 /**
  * 
  * @param {*} req 
