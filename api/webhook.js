@@ -4,7 +4,14 @@ const webHookHandlers = {
     'checkout.session.completed': (data) => {
         console.log('Checkout completed successfully', data);
         // other business logic: write to database, email to user, connect to third party service
+    },
+    'payment_intent.succeeded': (data) => {
+        console.log('Payment succeeded', data);
+    },
+    'payment_intent.payment_failed': (data) => {
+        console.log('Payment Failed', data);
     }
+    
 }
 /**
  * 
@@ -27,10 +34,16 @@ function webhook(req, res) {
             return res.status(400).send(`Webhook error ${error.message}`);
         }
 
-    if(stripeEvent.type === 'checkout.session.completed') {
+    /* if(stripeEvent.type === 'checkout.session.completed') {
         const session = stripeEvent.data.object;
-        console.log('Stripe Event data', session);
+        console.log('Stripe Event data', session); 
+        }
+    */
+
+    if ( webHookHandlers[Event.type]) {
+        webHookHandlers[Event.type](Event.data.object);
     }
+    
 
     
 }
